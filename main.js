@@ -46,5 +46,13 @@ function config(event){
     }
 
     // Pasamos el tablero a la página
-    
-}
+    container = document.querySelector("#container");
+    container.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr)`;
+    for(i=0;i<size;i++){
+        for(j=0;j<size;j++){
+            btn = document.createElement("button");
+            btn.value = board[i][j];
+        }
+        container.append(btn);
+        
+    }}
